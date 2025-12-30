@@ -1,0 +1,16 @@
+(!! HELP FUNCTION TRIGGERED !!)
+
+wbh stands for "webhook"
+The Following lines of text are commands for "console//:"
+
+----------DISCORD TOOLS----------
+
+wbh silent_keylogger - Creates a discord keylogger that sends keystrokes every 10 seconds without notification.
+wbh keylogger - Creates a discord keylogger that takes screenshots and camera captures.
+wbh s - Sends a single message to a specified webhook.
+wbh sp - Spams a specified webhook with a specified message a specified number of times.
+wbh delete - Deletes a specified webhook.
+wbh info - Retrieves information about a specified webhook.
+
+----------PY2EXE TOOL----------
+py2exe - Converts a specified python file into an executable using pyinstaller.
