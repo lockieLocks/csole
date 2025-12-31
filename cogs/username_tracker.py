@@ -24,7 +24,7 @@ class Username_Tr:
     },
     "Twitter (X)": {
         "url": f"https://twitter.com/{username}",
-        "error_msg": "This account doesn’t exist",
+        "error_msg": "This account doesn't exist",
         "check_type": "text"
     },
     "Instagram": {

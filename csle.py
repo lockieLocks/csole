@@ -6,6 +6,8 @@ from cogs.Malicous_Cogs.silent_keylogger_builder import Silent_KeyLogger
 from cogs.Malicous_Cogs.keylogger_builder import keylogger
 from cogs.ip_ping import ping_ip
 from cogs.username_tracker import Username_Tr
+from cogs.url_shortener import shorten_url
+
 
 def clear():
     if os.name == "nt":
@@ -57,8 +59,26 @@ def main():
     help_cl.help_reminder()
     option_raw = input("console//: ")
     option = option_raw.lower().strip()
+
+    # HELP COMMANDS ++++++
+
     if option == "help":
         help_cl.help()
+    elif option == "rhelp":
+        if not os.path.exists("hr.txt"):
+            with open("hr.txt", "w") as f:
+                f.write("Reminder: Type 'help' to view the help menu.")
+            input("Help reminder activated...\n\nPress Enter to continue...")
+        else:
+            os.remove("hr.txt")
+            input("Help reminder deactivated...\n\nPress Enter to continue...")
+
+
+    # WBH/WEBHOOK COMMANDS ++++++
+
+    elif option == "wbh":
+        wbh_exec = wbh()
+        wbh_exec.wbh_standard()
     elif option == "wbh silent_keylogger":
         keylogger_execute = Silent_KeyLogger()
         keylogger_execute.run()
@@ -77,17 +97,27 @@ def main():
     elif option == "wbh info":
         wbh_info_exec = wbh()
         wbh_info_exec.wbh_info()
-    elif option == "exit":
-        exit()
+
+    # UTILLY COMMANDS ++++++
+
     elif option == "py2exe":
         py2exe()
-    elif option == "rhelp":
-        os.remove("hr.py")
-    elif option == "ip ping":
-        ping_ip()
     elif option == "ut":
         username_tracker = Username_Tr()
         asyncio.run(username_tracker.track_username())
+
+    elif option == "tinyurl":
+        shorten_url()
+
+    # NETWORKING COMMANDS ++++++
+
+    elif option == "ip ping":
+        ping_ip()
+
+    # OTHER ++++++
+
+    elif option == "exit":
+        exit()
     else:
         print("Invalid command.")
         input("\nPress Enter to continue...")
