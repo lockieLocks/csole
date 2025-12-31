@@ -11,6 +11,8 @@ wbh s - Sends a single message to a specified webhook.
 wbh sp - Spams a specified webhook with a specified message a specified number of times.
 wbh delete - Deletes a specified webhook.
 wbh info - Retrieves information about a specified webhook.
+ip ping - Pings a selected IP a select amount of times
+ut - [Username Tracker | >> FEATURE IN BETA << | ] Checks if usernames are used in various popular platforms
 
 ----------PY2EXE TOOL----------
 py2exe - Converts a specified python file into an executable using pyinstaller.

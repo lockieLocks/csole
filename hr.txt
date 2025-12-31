@@ -1,1 +1,1 @@
-Hello, please use the "help" command to to view all commands!
+Hello, please use the "help" command to to view all commands, [If you never want to see this message again please type "rhelp" and then press enter]!
