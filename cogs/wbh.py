@@ -8,7 +8,7 @@ class wbh:
 
     def wbh_info(self):
         print("Program is asking for a webhook")
-        webhook_raw = input("console//: ")
+        webhook_raw = input("console//: \n")
         webhook = webhook_raw.strip()
         r = requests.get(webhook)
         if r.status_code in [200, 201, 202, 204]:
@@ -16,8 +16,9 @@ class wbh:
             data = r.json()
             for key, value in data.items():
                 print(f"{key} >> {value}")
+            input("\nPress Enter to continue...")
         else:
-            print("Invalid webhook URL.")
+            input("Invalid webhook URL.\n\nPress Enter to continue...")
 
     def wbh_s(self):
         print("Program is asking for a webhook")
