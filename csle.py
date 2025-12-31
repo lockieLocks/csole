@@ -7,7 +7,7 @@ from cogs.Malicous_Cogs.keylogger_builder import keylogger
 from cogs.ip_ping import ping_ip
 from cogs.username_tracker import Username_Tr
 from cogs.url_shortener import shorten_url
-
+from cogs.status_code import get_url_status
 
 def clear():
     if os.name == "nt":
@@ -118,6 +118,8 @@ def main():
 
     elif option == "exit":
         exit()
+    elif option == "status url":
+        get_url_status()
     else:
         print("Invalid command.")
         input("\nPress Enter to continue...")
