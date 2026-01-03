@@ -2,14 +2,16 @@ import asyncio
 import os
 import shutil
 import requests
-from cogs.wbh import wbh
+from cogs.Discord_cogs.wbh import wbh
 from cogs.Malicous_Cogs.silent_keylogger_builder import Silent_KeyLogger
 from cogs.Malicous_Cogs.keylogger_builder import keylogger
-from cogs.ip_ping import ping_ip
-from cogs.username_tracker import Username_Tr
-from cogs.url_shortener import shorten_url
-from cogs.status_code import get_url_status
-from cogs.ip_lookup import ip_lookup_func
+from cogs.Utility_cogs.username_tracker import Username_Tr
+from cogs.Utility_cogs.url_shortener import shorten_url
+from cogs.Network_cogs.ip_lookup import ip_lookup_func
+from cogs.Network_cogs.ip_ping import ping_ip
+from cogs.Utility_cogs.username_tracker import Username_Tr
+from cogs.Utility_cogs.url_shortener import shorten_url
+
 
 
 def clear():
