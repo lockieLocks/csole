@@ -4,15 +4,20 @@ wbh stands for "webhook"
 The Following lines of text are commands for "console//:"
 
 ----------DISCORD TOOLS----------
+wbh silent_keylogger <WEBHOOK> - Creates a discord keylogger that sends keystrokes every 10 seconds without notification.
+wbh keylogger <WEBHOOK> - Creates a discord keylogger that takes screenshots and camera captures.
+wbh s <WEBHOOK> - Sends a single message to a specified webhook.
+wbh sp <WEBHOOK> - Spams a specified webhook with a specified message a specified number of times.
+wbh delete <WEBHOOK> - Deletes a specified webhook.
+wbh info <WEBHOOK> - Retrieves information about a specified webhook.
 
-wbh silent_keylogger - Creates a discord keylogger that sends keystrokes every 10 seconds without notification.
-wbh keylogger - Creates a discord keylogger that takes screenshots and camera captures.
-wbh s - Sends a single message to a specified webhook.
-wbh sp - Spams a specified webhook with a specified message a specified number of times.
-wbh delete - Deletes a specified webhook.
-wbh info - Retrieves information about a specified webhook.
-ip ping - Pings a selected IP a select amount of times
-ut - [Username Tracker | >> FEATURE IN BETA << | ] Checks if usernames are used in various popular platforms
+----------NETWORK TOOLS----------
+ip ping <IP> - Pings a selected IP a select amount of times
+iplookup <URL> - Looks up 
+
+----------UTILITY TOOLS----------
+ut <USERNAME> - [Username Tracker | >> FEATURE IN BETA << | ] Checks if usernames are used in various popular platforms
+tinyurl <URL> - Shortens a selected url with the tinyurl API
 
 ----------PY2EXE TOOL----------
 py2exe - Converts a specified python file into an executable using pyinstaller.
