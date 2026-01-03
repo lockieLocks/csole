@@ -1,7 +1,6 @@
 import requests
 
-def get_url_status():
-    url = input("Enter the URL to check its status code: ")
+def get_url_status(url):
     try:
         response = requests.get(url)
         if response.status_code in [200, 201, 202]:

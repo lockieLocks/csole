@@ -19,8 +19,7 @@ wbh silent_keylogger >> Build a silent keylogger that sends logs to a webhook
 """
         print(message)
 
-    def wbh_info(self):
-        print("Program is asking for a webhook")
+    def wbh_info(self, webhook):
         webhook_raw = input("console//: \n")
         webhook = webhook_raw.strip()
         r = requests.get(webhook)
@@ -33,11 +32,8 @@ wbh silent_keylogger >> Build a silent keylogger that sends logs to a webhook
         else:
             input("Invalid webhook URL.\n\nPress Enter to continue...")
 
-    def wbh_s(self):
+    def wbh_s(self, webhook):
         try:
-            print("Program is asking for a webhook")
-            webhook_raw = input("console//: ")
-            webhook = webhook_raw.strip()
             print("Program is asking for a message to send")
             message = input("console//: ")
             payload = {"content": message}
@@ -49,11 +45,8 @@ wbh silent_keylogger >> Build a silent keylogger that sends logs to a webhook
         except Exception as e:
             input(f"An error occurred: {e}...\n\nPress Enter to continue...")
 
-    def wbh_sp(self):
+    def wbh_sp(self, webhook):
         try:
-            print("Program is asking for a webhook")
-            webhook_raw = input("console//: ")
-            webhook = webhook_raw.strip()
             print("Program is asking for text to spam")
             text = input("console//: ")
             print("Program is asking for number of times to spam")
@@ -74,11 +67,9 @@ wbh silent_keylogger >> Build a silent keylogger that sends logs to a webhook
         except Exception as e:
             input(f"An error occurred: {e}... \n\nPress Enter to continue...")
 
-    def wbh_delete(self):
+    def wbh_delete(self, webhook):
         try:
-            print("Program is asking for a webhook to delete")
-            webhook_raw = input("console//: ")
-            webhook = webhook_raw.strip()
+            webhook = webhook.strip()
             r = requests.delete(webhook)
             if r.status_code in [200, 201, 202, 204]:
                 input("Webhook deleted successfully... \n\nPress Enter to continue...")

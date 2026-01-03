@@ -1,8 +1,6 @@
 import os
 
-def ping_ip():
-    ip_raw = input("Program is asking for an IP address to ping\n\nconsole//: ")
-    ip = ip_raw.strip()
+def ping_ip(ip):
     amount = input("Program is asking for number of ping attempts (default 1)\n\nconsole//: ")
     if amount.isdigit():
         count_flag = f"-c {amount}"

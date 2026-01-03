@@ -12,11 +12,10 @@ def clear():
 class Username_Tr:
     def __init__(self):
         pass
-    async def track_username(self):
+    async def track_username(self, username):
         print("WARNING: This feature is in beta and may not work as expected.")
         time.sleep(3)
         clear()
-        username = input("Program is asking for a username to track\n\nconsole//: ").strip()
         platforms = {
     "Youtube": {
         "url": f"https://youtube.com/@{username}",
